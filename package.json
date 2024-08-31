@@ -2,7 +2,10 @@
   "name": "@wishlist/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "icons": "npx @svgr/cli --out-dir frontend/src/app/icon -- frontend/public/icon && npm run lint-icons-fix",
+    "lint-icons-fix": "eslint ./frontend/src/app/icon --fix --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
   "private": true,
   "devDependencies": {
     "@nx/esbuild": "19.6.4",
@@ -15,6 +18,9 @@
     "@nx/vite": "19.6.4",
     "@nx/web": "19.6.4",
     "@nx/workspace": "19.6.4",
+    "@svgr/cli": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0",
     "@swc-node/register": "~1.9.1",
     "@swc/cli": "~0.3.12",
     "@swc/core": "~1.5.7",

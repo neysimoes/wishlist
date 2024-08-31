@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    "@svgr/plugin-svgo",
+    "@svgr/plugin-jsx"
+  ],
+  "ignoreExisting": true,
+  "typescript": true,
+  "jsxRuntime": "automatic",
+  "icon": true
+}
