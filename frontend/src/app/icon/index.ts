@@ -1,0 +1,7 @@
+export { default as Close } from './Close'
+export { default as FavoriteFill } from './FavoriteFill'
+export { default as Favorite } from './Favorite'
+export { default as PersonFill } from './PersonFill'
+export { default as StarFill } from './StarFill'
+export { default as StarHalf } from './StarHalf'
+export { default as Star } from './Star'
