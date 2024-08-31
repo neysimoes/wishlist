@@ -2,3 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --font-source-sans: 'Source Sans 3';
+  --primary: #8200ff;
+}
+
+body {
+  @apply antialiased;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+svg {
+  overflow: visible;
+}

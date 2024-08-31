@@ -1,15 +1,16 @@
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes, Link } from 'react-router-dom'
+import Header from './component/Header'
 
 export function App() {
   return (
     <div>
+      <Header />
       <Routes>
         <Route
           path="/"
           element={
             <div>
-              This is the generated root route.{' '}
-              <Link to="/page-2">Click here for page 2.</Link>
+              This is the generated root route. <Link to="/page-2">Click here for page 2.</Link>
             </div>
           }
         />
@@ -24,7 +25,7 @@ export function App() {
       </Routes>
       {/* END: routes */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
