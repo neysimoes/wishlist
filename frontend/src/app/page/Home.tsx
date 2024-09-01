@@ -1,4 +1,3 @@
-import Container from '../component/Container'
 import ProductCard from '../component/ProductCard'
 const productData = {
   code: 'D22-2077-006',

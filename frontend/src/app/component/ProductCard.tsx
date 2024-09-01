@@ -1,5 +1,6 @@
 import { formatCurrency } from '../helper/currency'
 import { ProductData } from '../types/product'
+import Rating from './Rating'
 
 type ProductCardProps = {
   product: ProductData
@@ -10,6 +11,7 @@ const ProductCard = ({ product }: ProductCardProps) => (
     <img className="w-full" src={product.image} alt={product.details.description} />
     <div className="p-2 flex flex-col gap-1">
       <span>{product.name}</span>
+      <Rating rating={product.rating} />
       <span className="text-gray-300 line-through">{formatCurrency(product.fullPriceInCents)}</span>
       <span className="text-primary font-bold text-2xl">{formatCurrency(product.salePriceInCents)}</span>
     </div>
