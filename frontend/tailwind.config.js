@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       colors: {
         primary: 'var(--primary)',
+        primaryDark: 'var(--primary-dark)',
       },
       fontFamily: {
         sans: ['var(--font-source-sans)', 'sans-serif'],

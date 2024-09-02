@@ -1,3 +1,5 @@
+export type ProductListData = ProductData[]
+
 export type ProductData = {
   code: string
   name: string

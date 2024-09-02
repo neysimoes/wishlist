@@ -6,6 +6,7 @@
 :root {
   --font-source-sans: 'Source Sans 3';
   --primary: #8200ff;
+  --primary-dark: #30006b;
 }
 
 body {
