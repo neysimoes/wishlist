@@ -6,19 +6,20 @@ import Menu from './Menu'
 const Header = () => {
   return (
     <header className="bg-primary h-20 flex items-center">
-      <Container className="flex flex-row justify-between">
-        <Link to="/">
+      <Container className="grid grid-cols-3 lg:grid-cols-8 lg:gap-4">
+        <Link to="/" className="order-2 lg:order-1 lg:col-span-6">
           <h1>
-            <img src="public/netshoes-logo.svg" alt="Logotipo da Netshoes" />
+            <img src="public/logo.svg" alt="Logotipo da loja" />
           </h1>
         </Link>
-        <div className="w-48 flex flex-row justify-between">
-          <Link to="/wishlist" className="flex flex-row group">
-            <Favorite className="fill-white text-2xl group-hover:hidden" />
-            <FavoriteFill className="fill-white text-2xl hidden group-hover:block" />
-            <span className="text-white ml-2 text-lg">Wishlist</span>
+        <div className="flex flex-row justify-end order-3 lg:order-2">
+          <Link to="/wishlist" className="flex flex-row">
+            <Favorite className="fill-white text-2xl" />
+            <span className="text-white ml-2 text-lg hidden lg:block">Wishlist</span>
           </Link>
-          <Menu />
+        </div>
+        <div className="flex flex-row order-1 lg:order-3 lg:justify-end">
+          <Menu className="" />
         </div>
       </Container>
     </header>
