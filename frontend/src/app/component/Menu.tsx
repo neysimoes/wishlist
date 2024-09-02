@@ -2,17 +2,30 @@ import { PersonFill } from '../icon'
 
 const Menu = () => (
   <div className="group relative">
-    <div className="rounded-full">
-      <PersonFill className="fill-white text-2xl" />
+    <div className="rounded-full bg-white p-0.5">
+      <PersonFill className="fill-primary text-xl" />
     </div>
-    <ul
-      className="hidden group-hover:block absolute right-0 top-8 bg-white z-10 w-24 p-2 text-sm
-drop-shadow-lg before:block before:border-white before:w-0 before:h-0 before:border-x-transparent before:border-x-8 before:border-b-8 before:absolute before:right-1 before:-top-2"
-    >
-      <li>Entrar</li>
-      <li>Minha Conta</li>
-      <li>Endereços</li>
-      <li>Minha Netshoes</li>
+    <ul className="hidden rounded-md shadow-lg shadow-gray-400 group-hover:block absolute -right-1 top-10 bg-white z-10 w-28 p-2 text-sm drop-shadow-lg before:block before:border-white before:w-0 before:h-0 before:border-x-transparent before:border-x-8 before:border-b-8 before:absolute before:right-2 before:-top-2">
+      <li>
+        <a href="/#" className="hover:text-primary">
+          Entrar
+        </a>
+      </li>
+      <li>
+        <a href="/#" className="hover:text-primary">
+          Minha Conta
+        </a>
+      </li>
+      <li>
+        <a href="/#" className="hover:text-primary">
+          Endereços
+        </a>
+      </li>
+      <li>
+        <a href="/#" className="hover:text-primary">
+          Minha Netshoes
+        </a>
+      </li>
     </ul>
   </div>
 )
