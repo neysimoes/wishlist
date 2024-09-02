@@ -1,4 +1,4 @@
-import { Favorite, FavoriteFill } from '../icon'
+import { Favorite } from '../icon'
 import Container from './Container'
 import { Link } from 'react-router-dom'
 import Menu from './Menu'

@@ -20,7 +20,7 @@ const Root = () => {
       <Container>
         <ol className="flex flex-row py-4 border-b border-gray-500">
           {crumbs.map((crumb, index) => (
-            <li key={index} className="text-primary-dark last:font-bold mr-1">
+            <li key={index} className="text-primary last:font-bold mr-1">
               {index > 0 && ' / '}
               <Link to={crumb.pathname}>{crumb.name}</Link>
             </li>

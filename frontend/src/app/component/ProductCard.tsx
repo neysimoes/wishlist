@@ -6,10 +6,15 @@ type ProductCardProps = {
   product: ProductData
   ActionButton?: JSX.ElementType
   handleAction?: (product: ProductData) => void
+  hasOnWishlist?: boolean
 }
 
-const ProductCard = ({ product, ActionButton, handleAction }: ProductCardProps) => (
-  <div className="bg-white shadow-lg rounded-md overflow-hidden shadow-gray-400 mt-4 relative border border-gray-300">
+const ProductCard = ({ product, ActionButton, handleAction, hasOnWishlist }: ProductCardProps) => (
+  <div
+    className={`group ${
+      hasOnWishlist && 'hasonwishlist'
+    } bg-white shadow-lg rounded-md overflow-hidden shadow-gray-400 mt-4 relative border border-gray-300`}
+  >
     {ActionButton && handleAction && (
       <ActionButton
         className="absolute top-2 right-2 cursor-pointer"
