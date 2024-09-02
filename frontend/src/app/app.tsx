@@ -1,25 +1,31 @@
-import { Route, Routes, Link } from 'react-router-dom'
-import Header from './component/Header'
-import Home from './page/Home'
+import { createBrowserRouter } from 'react-router-dom'
 
-export function App() {
-  return (
-    <div>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/page-2"
-          element={
-            <div>
-              <Link to="/">Click here to go back to root page.</Link>
-            </div>
-          }
-        />
-      </Routes>
-      {/* END: routes */}
-    </div>
-  )
-}
+import Home, { homeLoader } from './routes/Home'
+import Wishlist, { wishlistLoader } from './routes/Wishlist'
+import Root from './routes/Root'
 
-export default App
+const app = createBrowserRouter([
+  {
+    element: <Root />,
+    handle: {
+      crumb: 'Home',
+    },
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+        loader: homeLoader,
+      },
+      {
+        path: 'wishlist',
+        element: <Wishlist />,
+        loader: wishlistLoader,
+        handle: {
+          crumb: 'Wishlist',
+        },
+      },
+    ],
+  },
+])
+
+export default app
