@@ -1,6 +1,7 @@
-import { Link, Outlet, useMatches } from 'react-router-dom'
+import { Outlet, useMatches } from 'react-router-dom'
 import Header from '../component/Header'
 import Container from '../component/Container'
+import Beadcrumbs from '../component/Breadcrumbs'
 
 type handleProps = { crumb?: string }
 
@@ -10,7 +11,7 @@ const Root = () => {
   const crumbs = matches
     .filter((match) => Boolean((match.handle as handleProps)?.crumb))
     .map((match) => ({
-      name: (match.handle as handleProps).crumb,
+      name: (match.handle as handleProps).crumb as string,
       pathname: match.pathname,
     }))
 
@@ -18,14 +19,7 @@ const Root = () => {
     <>
       <Header />
       <Container>
-        <ol className="flex flex-row py-4 border-b border-gray-500">
-          {crumbs.map((crumb, index) => (
-            <li key={index} className="text-primary last:font-bold mr-1">
-              {index > 0 && ' / '}
-              <Link to={crumb.pathname}>{crumb.name}</Link>
-            </li>
-          ))}
-        </ol>
+        <Beadcrumbs crumbs={crumbs} />
       </Container>
       <main>
         <Outlet />
