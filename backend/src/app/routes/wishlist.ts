@@ -2,10 +2,6 @@ import { FastifyInstance } from 'fastify'
 import productList from '../products'
 
 export default async function (fastify: FastifyInstance) {
-  fastify.get('/products', async function () {
-    return productList
-  })
-
   fastify.get('/wishlist', async function (request) {
     const skus = ((request.query as { skus: string })?.skus || '').split(',')
     return productList.filter((item) => {
